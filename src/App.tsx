@@ -9,20 +9,12 @@ import { motion } from 'motion/react';
 
 // --- Components ---
 
-const Logo = ({ className = "w-8 h-8" }: { className?: string }) => (
-  <svg viewBox="0 0 100 100" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-    {/* Stylized 'B' / Heart shape based on the PDF logo */}
-    <path 
-      d="M20 20 H50 C75 20 90 35 90 55 C90 75 75 90 50 90 H20 C10 90 0 80 0 70 V40 C0 30 10 20 20 20Z" 
-      fill="#0ED894" 
-    />
-    <path 
-      d="M20 20 V55 H50 C65 55 75 45 75 37.5 C75 30 65 20 50 20 H20Z" 
-      fill="#0ED894" 
-    />
-    {/* Inner Play Button */}
-    <path d="M45 45 L65 55 L45 65 V45Z" fill="black" />
-  </svg>
+const Logo = ({ className = "h-8" }: { className?: string }) => (
+  <img
+    src="/logo/Bandstream-logo-quadri-blanc.svg"
+    alt="Bandstream"
+    className={className}
+  />
 );
 
 const Button = ({ 
@@ -124,9 +116,8 @@ export default function App() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-band-black/90 backdrop-blur-md border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-3 cursor-pointer">
-            <Logo className="w-10 h-10" />
-            <span className="font-display font-bold text-2xl tracking-tight">band<span className="text-band-green">stream</span></span>
+          <div className="flex items-center cursor-pointer">
+            <Logo className="h-10" />
           </div>
 
           <div className="hidden md:flex items-center gap-8">
@@ -234,8 +225,7 @@ export default function App() {
           <div className="md:w-1/2 flex justify-center">
             <div className="relative w-80 h-80 md:w-96 md:h-96 bg-band-black rounded-full flex items-center justify-center p-8 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
                <div className="text-center text-band-cream">
-                 <Logo className="w-24 h-24 mx-auto mb-4" />
-                 <p className="font-display font-bold text-2xl">bandstream</p>
+                 <Logo className="h-16 mx-auto mb-4" />
                  <p className="text-sm opacity-60 mt-2">EST. 2026</p>
                </div>
             </div>
@@ -247,9 +237,8 @@ export default function App() {
       <footer className="bg-band-black pt-20 pb-10 px-6 border-t border-white/10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-1">
-            <div className="flex items-center gap-2 mb-6">
-              <Logo className="w-8 h-8" />
-              <span className="font-display font-bold text-xl">bandstream</span>
+            <div className="flex items-center mb-6">
+              <Logo className="h-8" />
             </div>
             <p className="text-band-gray-medium text-sm leading-relaxed">
               Empowering independent artists and labels to share and earn from their music.
